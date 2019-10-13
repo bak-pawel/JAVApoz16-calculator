@@ -10,7 +10,8 @@ public class App {
         ApplicationContext appCtx = new AnnotationConfigApplicationContext(AppConfig.class);
         Calculator bean = appCtx.getBean(Calculator.class);
         double result = bean.calculate(OperationType.ADDITION, 2.0, 3.0);
+        double result1 = bean.calculate(OperationType.POWER, 2.0, 3);
 
-        System.out.println("Calculation result: " + result);
+        System.out.println("Calculation result: " + result1);
     }
 }
